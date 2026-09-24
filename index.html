@@ -1,81 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phishing Awareness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Awareness Training</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        .card {
-            background: white;
-            max-width: 600px;
-            margin: 20px;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #080b12;
+        color: #f5f7fa;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .background {
+        position: fixed;
+        inset: 0;
+        background:
+            radial-gradient(circle at 20% 20%, rgba(255, 50, 50, 0.12), transparent 30%),
+            radial-gradient(circle at 80% 80%, rgba(0, 170, 255, 0.10), transparent 30%);
+        z-index: -1;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 850px;
+        background: rgba(15, 20, 30, 0.96);
+        border: 1px solid #303847;
+        border-radius: 18px;
+        padding: 45px;
+        box-shadow: 0 20px 70px rgba(0,0,0,0.5);
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border-bottom: 1px solid #303847;
+        padding-bottom: 20px;
+        margin-bottom: 35px;
+    }
+
+    .shield {
+        font-size: 42px;
+    }
+
+    .brand {
+        color: #8f9bad;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .alert {
+        text-align: center;
+    }
+
+    .icon {
+        width: 95px;
+        height: 95px;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+        background: rgba(255, 55, 55, 0.12);
+        border: 2px solid #ff3d3d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        box-shadow: 0 0 35px rgba(255, 55, 55, 0.25);
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 12px;
+        color: #ff4d4d;
+    }
+
+    .subtitle {
+        font-size: 21px;
+        color: #d6dbe3;
+        margin-bottom: 30px;
+    }
+
+    .message {
+        background: #111722;
+        border: 1px solid #303847;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 25px 0;
+        text-align: left;
+    }
+
+    .message h2 {
+        margin-bottom: 12px;
+        font-size: 21px;
+    }
+
+    .message p {
+        color: #aeb7c5;
+        line-height: 1.6;
+    }
+
+    .red {
+        color: #ff5b5b;
+    }
+
+    .green {
+        color: #48e39b;
+    }
+
+    .clues {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .clue {
+        background: #151b27;
+        border: 1px solid #293140;
+        padding: 18px;
+        border-radius: 10px;
+        text-align: left;
+    }
+
+    .clue strong {
+        display: block;
+        margin-bottom: 7px;
+        color: white;
+    }
+
+    .clue span {
+        color: #9ca7b7;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .score {
+        margin-top: 30px;
+        padding: 22px;
+        background: rgba(72, 227, 155, 0.08);
+        border: 1px solid rgba(72, 227, 155, 0.3);
+        border-radius: 12px;
+    }
+
+    .score h3 {
+        color: #48e39b;
+        margin-bottom: 8px;
+    }
+
+    .footer {
+        margin-top: 30px;
+        color: #687386;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    @media (max-width: 650px) {
+        .container {
+            padding: 25px;
         }
 
         h1 {
-            color: #c62828;
-            font-size: 42px;
+            font-size: 36px;
         }
 
-        h2 {
-            color: #333;
+        .clues {
+            grid-template-columns: 1fr;
         }
-
-        p {
-            color: #555;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .warning {
-            background: #fff3cd;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 25px;
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
-    <div class="card">
-        <h1>?? You Have Been Phished!</h1>
 
-        <h2>Don't worry — this was a classroom simulation.</h2>
+<div class="background"></div>
 
-        <p>
-            This was a cybersecurity awareness exercise designed to
-            demonstrate how easy it can be to fall for a phishing email.
+<div class="container">
+
+    <div class="top">
+        <div class="shield">🛡️</div>
+        <div>
+            <div class="brand">Cybersecurity Awareness Program</div>
+            <div>School Security Training</div>
+        </div>
+    </div>
+
+    <div class="alert">
+
+        <div class="icon">⚠️</div>
+
+        <h1>You Have Been Phished!</h1>
+
+        <p class="subtitle">
+            Don't panic. This was a <strong>classroom simulation.</strong>
         </p>
 
-        <div class="warning">
-            <strong>What should you have noticed?</strong>
+        <div class="message">
+            <h2>🎯 What just happened?</h2>
+
             <p>
-                • The message created a sense of urgency.<br>
-                • It asked you to click a link.<br>
-                • The sender or link may not have been trustworthy.<br>
-                • The message asked you to verify your account.
+                You clicked a link inside a simulated phishing email.
+                Nothing was downloaded, no password was collected,
+                and no personal information was recorded.
             </p>
         </div>
 
-        <p>
-            <strong>Think before you click!</strong><br>
-            Check the sender, inspect links, and never enter your password
-            after following an unexpected email link.
-        </p>
+        <div class="message">
+            <h2>🔎 What clues could you have spotted?</h2>
+
+            <div class="clues">
+
+                <div class="clue">
+                    <strong>🚨 Urgency</strong>
+                    <span>
+                        The message tried to make you act quickly
+                        without giving you time to think.
+                    </span>
+                </div>
+
+                <div class="clue">
+                    <strong>🔗 Suspicious Link</strong>
+                    <span>
+                        Always check where a link actually goes
+                        before clicking it.
+                    </span>
+                </div>
+
+                <div class="clue">
+                    <strong>📧 Sender</strong>
+                    <span>
+                        Check the sender's email address carefully.
+                        Small differences can be a warning sign.
+                    </span>
+                </div>
+
+                <div class="clue">
+                    <strong>🔐 Account Request</strong>
+                    <span>
+                        Be cautious when an unexpected message asks
+                        you to verify your account or password.
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="score">
+            <h3>💡 The Golden Rule</h3>
+
+            <p>
+                <strong>STOP → THINK → CHECK</strong>
+            </p>
+
+            <p style="margin-top:8px;">
+                Before clicking a suspicious link, stop and inspect
+                the message, sender, and destination.
+            </p>
+        </div>
+
+        <div class="footer">
+            Cybersecurity Awareness • Classroom Simulation •
+            No information was collected
+        </div>
+
     </div>
+</div>
+
 </body>
 </html>
